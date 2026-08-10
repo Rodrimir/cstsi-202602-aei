@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+
+      h2 {
+        font-size: 1rem;
+        margin-top: 50px;
+      }
+
+      button {
+        width: 120px;
+        height: 40px;
+        color: #1e1e1e;
+        background-color: transparent;
+        background-image: linear-gradient(
+          to right,
+          #1e1e1e 50%,
+          transparent 50%
+        );
+        background-size: 200% 100%;
+        background-position: right center;
+        border: 2px solid #1e1e1e;
+        cursor: pointer;
+        transition:
+          background-position 500ms ease,
+          color 500ms ease,
+          letter-spacing 500ms ease;
+      }
+
+      button:hover {
+        color: white;
+        background-position: left center;
+        letter-spacing: 2px;
+      }
+
+      input {
+        width: 150px;
+        padding: 8px;
+        outline: 0;
+        border: 1px solid #808080;
+        transition:
+          width 500ms ease,
+          border-color 500ms ease,
+          box-shadow 500ms ease;
+      }
+
+      input:focus {
+        width: 250px;
+        border-color: #1e1e1e;
+        box-shadow: 0 0 8px #808080;
+      }
+
+      a {
+        position: relative;
+        margin-right: 25px;
+        color: #1e1e1e;
+        text-decoration: none;
+        transition: color 300ms ease;
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        background-color: red;
+        transform: scaleX(0);
+        transition: transform 300ms ease;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 255, 145);
+        transition:
+          transform 20s ease,
+          border-radius 5s ease,
+          background-color 5s ease;
+      }
+
+      div:hover {
+        transform: rotate(9999deg) scale(5);
+        border-radius: 50%;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>background-position, color, letter-spacing</h2>
+    <button>Enter</button>
+
+    <h2>Campo: width, border-color, box-shadow</h2>
+    <input type="text" placeholder="E-mail" />
+
+    <h2>transform (scaleX), color</h2>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+
+    <h2>transform, border-radius, background-color</h2>
+    <div></div>
+  </body>
+</html>
