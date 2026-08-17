@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+
+      .area {
+        width: 220px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px dashed #808080;
+      }
+
+      .loader {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 14px solid #1e1e1e;
+        border-bottom-color: #9d9d43;
+        border-left-color: #9d9d43;
+        animation: girar 1s linear infinite;
+        animation-play-state: paused;
+      }
+
+      .area:hover .loader {
+        animation-play-state: running;
+      }
+
+      @keyframes girar {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>:hover + animation-play-state</h2>
+    <div class="area">
+      <div class="loader"></div>
+    </div>
+  </body>
+</html>

@@ -88,7 +88,7 @@
       div {
         width: 100px;
         height: 100px;
-        background-color: rgb(0, 255, 145);
+        background-color: red;
         transition:
           transform 20s ease,
           border-radius 5s ease,
@@ -96,9 +96,41 @@
       }
 
       div:hover {
-        transform: rotate(9999deg) scale(5);
+        transform: rotate(9999deg) scale(10);
         border-radius: 50%;
-        background-color: red;
+        background-image: url(./src/img/e.jpg);
+        animation:
+          piscar 0.3s infinite alternate 0.3s,
+          crecer 10.5s forwards infinite alternate 0.3s,
+          eistein 0.3s forwards infinite alternate 0.3s;
+      }
+
+      @keyframes piscar {
+        from {
+          background-color: black;
+        }
+        to {
+          background-color: red;
+        }
+      }
+
+      @keyframes crecer {
+        from {
+          width: 100px;
+          height: 100px;
+        }
+        to {
+          width: 250px;
+          height: 250px;
+        }
+      }
+
+      @keyframes eistein {
+        from {
+        }
+        to {
+          background-image: url(/src/img/e.jpg);
+        }
       }
     </style>
   </head>
