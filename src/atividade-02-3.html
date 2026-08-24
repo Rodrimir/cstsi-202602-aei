@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+
+      .quadro {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border: 2px solid #808080;
+      }
+
+      .bloco {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        animation: mover 2s linear infinite;
+      }
+
+      .bloco1 {
+        background-color: #1e1e1e;
+      }
+
+      .bloco2 {
+        background-color: #9d9d43;
+        animation-delay: -0.15s;
+      }
+
+      .bloco3 {
+        background-color: #cbcb8c;
+        animation-delay: -0.3s;
+      }
+
+      @keyframes mover {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(180px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>objetos tocando laterais do quadrado</h2>
+    <div class="quadro">
+      <div class="bloco bloco1"></div>
+      <div class="bloco bloco2"></div>
+      <div class="bloco bloco3"></div>
+    </div>
+  </body>
+</html>

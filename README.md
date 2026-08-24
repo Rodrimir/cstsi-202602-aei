@@ -11,5 +11,4 @@ dependência de runtime.
 ## Uso de IA
 
 Seguindo a orientação da disciplina: houve apoio de ferramentas de IA na
-preparação do ambiente — configuração do Vite e este
-README.
+preparação do ambiente — configuração do Vite e este README.
