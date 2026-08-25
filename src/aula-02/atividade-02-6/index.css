@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+.card {
+  width: 320px;
+}
+
+.skeleton {
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f0f0f0 50%,
+    #e0e0e0 75%
+  );
+  background-size: 200% 100%;
+  animation: brilho 1.2s linear infinite;
+}
+
+.skeleton.titulo {
+  width: 60%;
+  height: 20px;
+  margin-bottom: 16px;
+}
+
+.skeleton.linha {
+  width: 100%;
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+.skeleton.linha:last-of-type {
+  width: 80%;
+}
+
+.skeleton.imagem {
+  width: 100%;
+  height: 160px;
+  margin-top: 16px;
+}
+
+@keyframes brilho {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.conteudo {
+  display: none;
+}
+
+.conteudo .foto {
+  width: 100%;
+  height: 160px;
+  border-radius: 4px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #8ecae6, #219ebc);
+}
+
+.carregado .skeleton-wrapper {
+  display: none;
+}
+
+.carregado .conteudo {
+  display: block;
+}

@@ -1,6 +1,6 @@
 # cstsi-202602-aei
 
-Atividades da Aula 01 da disciplina **AEI — Animação de Elementos de Interface**
+Atividades da Aula 01, 02 e 03 da disciplina **AEI — Animação de Elementos de Interface**
 (CSTSI, IFSul Câmpus Pelotas, Prof. Gill Velleda Gonzales · 2026/02).
 
 ## Como rodar
@@ -11,4 +11,4 @@ dependência de runtime.
 ## Uso de IA
 
 Seguindo a orientação da disciplina: houve apoio de ferramentas de IA na
-preparação do ambiente — configuração do Vite e este README.
+preparação do ambiente — configuração do Vite e este do README, testes feitos a partir das ferramentas Claude code, Gemini pro e Grok.

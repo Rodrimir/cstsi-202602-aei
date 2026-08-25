@@ -1,0 +1,128 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  color: #1e1e1e;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #1e1e1e 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: right center;
+  border: 2px solid #1e1e1e;
+  cursor: pointer;
+  transition:
+    background-position 500ms ease,
+    color 500ms ease,
+    letter-spacing 500ms ease;
+}
+
+button:hover {
+  color: white;
+  background-position: left center;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 150px;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid #808080;
+  transition:
+    width 500ms ease,
+    border-color 500ms ease,
+    box-shadow 500ms ease;
+}
+
+input:focus {
+  width: 250px;
+  border-color: #1e1e1e;
+  box-shadow: 0 0 8px #808080;
+}
+
+a {
+  position: relative;
+  margin-right: 25px;
+  color: #1e1e1e;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transition: transform 300ms ease;
+}
+
+a:hover {
+  color: red;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition:
+    transform 20s ease,
+    border-radius 5s ease,
+    background-color 5s ease;
+}
+
+div:hover {
+  transform: rotate(9999deg) scale(10);
+  border-radius: 50%;
+  background-image: url(../../img/e.jpg);
+  animation:
+    piscar 0.3s infinite alternate 0.3s,
+    crecer 10.5s forwards infinite alternate 0.3s,
+    eistein 0.3s forwards infinite alternate 0.3s;
+}
+
+@keyframes piscar {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+@keyframes crecer {
+  from {
+    width: 100px;
+    height: 100px;
+  }
+  to {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes eistein {
+  from {
+  }
+  to {
+    background-image: url(../../img/e.jpg);
+  }
+}

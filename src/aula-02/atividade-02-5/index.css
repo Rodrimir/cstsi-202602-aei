@@ -1,0 +1,184 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+.container {
+  position: relative;
+  width: 460px;
+  height: 380px;
+  border: 3px solid #2f7d32;
+}
+
+.container div {
+  position: absolute;
+  width: 155px;
+  height: 175px;
+  background-image: url(../../img/goblin_big.png);
+  background-repeat: no-repeat;
+  background-size: 300% 400%;
+  opacity: 0;
+}
+
+.goblin-down {
+  background-position-y: 0%;
+  animation:
+    desce 1.4s linear 0s both,
+    anda-desce 0.35s step-end 0s 4 both;
+}
+
+.goblin-right {
+  background-position-y: 66.667%;
+  animation:
+    vai-direita 1.4s linear 1.4s both,
+    anda-direita 0.35s step-end 1.4s 4 both;
+}
+
+.goblin-up {
+  background-position-y: 33.333%;
+  animation:
+    sobe 1.4s linear 2.8s both,
+    anda-sobe 0.35s step-end 2.8s 4 both;
+}
+
+.goblin-left {
+  background-position-y: 100%;
+  animation:
+    vai-esquerda 1.4s linear 4.2s both,
+    anda-esquerda 0.35s step-end 4.2s 4 both;
+}
+
+@keyframes desce {
+  0% {
+    opacity: 0;
+    left: 0;
+    top: 0;
+  }
+  1% {
+    opacity: 1;
+    left: 0;
+    top: 0;
+  }
+  99% {
+    opacity: 1;
+    left: 0;
+    top: 205px;
+  }
+  100% {
+    opacity: 0;
+    left: 0;
+    top: 205px;
+  }
+}
+
+@keyframes vai-direita {
+  0% {
+    opacity: 0;
+    left: 0;
+    top: 205px;
+  }
+  1% {
+    opacity: 1;
+    left: 0;
+    top: 205px;
+  }
+  99% {
+    opacity: 1;
+    left: 305px;
+    top: 205px;
+  }
+  100% {
+    opacity: 0;
+    left: 305px;
+    top: 205px;
+  }
+}
+
+@keyframes sobe {
+  0% {
+    opacity: 0;
+    left: 305px;
+    top: 205px;
+  }
+  1% {
+    opacity: 1;
+    left: 305px;
+    top: 205px;
+  }
+  99% {
+    opacity: 1;
+    left: 305px;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 305px;
+    top: 0;
+  }
+}
+
+@keyframes vai-esquerda {
+  0% {
+    opacity: 0;
+    left: 305px;
+    top: 0;
+  }
+  1% {
+    opacity: 1;
+    left: 305px;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes anda-desce {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes anda-direita {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes anda-sobe {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes anda-esquerda {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}

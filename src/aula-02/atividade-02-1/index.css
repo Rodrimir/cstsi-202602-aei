@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+.loader {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 14px solid #1e1e1e;
+  border-bottom-color: #9d9d43;
+  border-left-color: #9d9d43;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
