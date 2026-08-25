@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>animate__flash animate__infinite / animate__repeat-3 no skeleton</h2>
+    <h2>animate__fadeOut no skeleton e animate__fadeInUp animate__delay-1s no conteúdo (JS)</h2>
+
+    <div class="card" id="card">
+      <div class="skeleton-wrapper">
+        <div class="skeleton titulo animate__animated animate__flash animate__infinite"></div>
+        <div class="skeleton linha animate__animated animate__flash animate__infinite"></div>
+        <div class="skeleton linha animate__animated animate__flash animate__infinite"></div>
+        <div class="skeleton linha animate__animated animate__flash animate__infinite"></div>
+        <div class="skeleton imagem animate__animated animate__flash animate__repeat-3"></div>
+      </div>
+
+      <div class="conteudo">
+        <h3>Página carregada</h3>
+        <p>Teste de carregamento</p>
+        <div class="foto"></div>
+      </div>
+    </div>
+
+    <script>
+      const card = document.getElementById("card");
+      const skeleton = card.querySelector(".skeleton-wrapper");
+      const conteudo = card.querySelector(".conteudo");
+
+      setTimeout(() => {
+        skeleton.classList.add("animate__animated", "animate__fadeOut");
+        conteudo.style.display = "block";
+        conteudo.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-1s");
+        setTimeout(() => card.classList.add("carregado"), 800);
+      }, 2500);
+    </script>
+  </body>
+</html>

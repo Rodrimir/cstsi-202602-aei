@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>animate__jello no hover do botão (JS)</h2>
+    <button id="btn">Enter</button>
+
+    <h2>animation-name: headShake (direto do Animate.css) + var(--animate-duration) no foco</h2>
+    <input type="text" placeholder="E-mail" />
+
+    <h2>animate__flash animate__infinite pausada, roda no hover (animation-play-state)</h2>
+    <nav>
+      <a class="animate__animated animate__flash animate__infinite" href="#">Início</a>
+      <a class="animate__animated animate__flash animate__infinite" href="#">Sobre</a>
+      <a class="animate__animated animate__flash animate__infinite" href="#">Contato</a>
+    </nav>
+
+    <h2>animate__tada animate__infinite no hover da caixa (JS)</h2>
+    <div class="caixa" id="caixa"></div>
+
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("mouseover", () => {
+        btn.classList.add("animate__animated", "animate__jello");
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.classList.remove("animate__animated", "animate__jello");
+      });
+
+      const caixa = document.getElementById("caixa");
+      caixa.addEventListener("mouseover", () => {
+        caixa.classList.add("animate__animated", "animate__tada", "animate__infinite");
+      });
+      caixa.addEventListener("mouseleave", () => {
+        caixa.classList.remove("animate__animated", "animate__tada", "animate__infinite");
+      });
+    </script>
+  </body>
+</html>

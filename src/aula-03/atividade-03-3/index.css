@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+:root {
+  --animate-duration: 0.8s;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+.card {
+  width: 320px;
+}
+
+.skeleton {
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+
+.skeleton.titulo {
+  width: 60%;
+  height: 20px;
+  margin-bottom: 16px;
+}
+
+.skeleton.linha {
+  width: 100%;
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+.skeleton.linha:last-of-type {
+  width: 80%;
+}
+
+.skeleton.imagem {
+  width: 100%;
+  height: 160px;
+  margin-top: 16px;
+}
+
+.conteudo {
+  display: none;
+}
+
+.conteudo .foto {
+  width: 100%;
+  height: 160px;
+  border-radius: 4px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #8ecae6, #219ebc);
+}
+
+.carregado .skeleton-wrapper {
+  display: none;
+}

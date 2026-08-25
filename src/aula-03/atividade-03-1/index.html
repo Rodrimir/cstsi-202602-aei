@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>animate__fadeInUp / animate__fadeOutDown no focus e blur (JS)</h2>
+    <div class="container">
+      <div class="input-group">
+        <label for="login">Username:</label>
+        <input id="login" type="text" name="login" placeholder="Username" />
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          name="login"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+
+    <h2>pulse direto do Animate.css</h2>
+
+    <h2>animate__rubberBand animate__faster no hover do botão (JS)</h2>
+    <div class="container">
+      <div class="button-group">
+        <button id="btn">Enter</button>
+      </div>
+    </div>
+
+    <script>
+      const login = document.getElementById("login");
+      const loginLabel = document.querySelector('label[for="login"]');
+      login.addEventListener("focus", () => {
+        loginLabel.classList.remove("animate__fadeOutDown");
+        loginLabel.classList.add("animate__animated", "animate__fadeInUp");
+      });
+      login.addEventListener("blur", () => {
+        loginLabel.classList.remove("animate__fadeInUp");
+        loginLabel.classList.add("animate__animated", "animate__fadeOutDown");
+      });
+
+      const password = document.getElementById("password");
+      const passwordLabel = document.querySelector('label[for="password"]');
+      password.addEventListener("focus", () => {
+        passwordLabel.classList.remove("animate__fadeOutDown");
+        passwordLabel.classList.add("animate__animated", "animate__fadeInUp");
+      });
+      password.addEventListener("blur", () => {
+        passwordLabel.classList.remove("animate__fadeInUp");
+        passwordLabel.classList.add("animate__animated", "animate__fadeOutDown");
+      });
+
+      const btn = document.getElementById("btn");
+      btn.addEventListener("mouseover", () => {
+        btn.classList.add("animate__animated", "animate__rubberBand", "animate__faster");
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.classList.remove("animate__animated", "animate__rubberBand", "animate__faster");
+      });
+    </script>
+  </body>
+</html>

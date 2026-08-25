@@ -1,0 +1,80 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+:root {
+  --animate-duration: 0.6s;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  color: #1e1e1e;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #1e1e1e 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: right center;
+  border: 2px solid #1e1e1e;
+  cursor: pointer;
+  transition:
+    background-position 500ms ease,
+    color 500ms ease;
+}
+
+button:hover {
+  color: white;
+  background-position: left center;
+}
+
+input {
+  width: 150px;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid #808080;
+  transition:
+    width 500ms ease,
+    border-color 500ms ease;
+}
+
+input:focus {
+  width: 250px;
+  border-color: #1e1e1e;
+  animation-name: headShake;
+  animation-duration: var(--animate-duration);
+}
+
+nav a {
+  margin-right: 25px;
+  color: #1e1e1e;
+  text-decoration: none;
+  animation-play-state: paused;
+}
+
+nav a:hover {
+  animation-play-state: running;
+}
+
+.caixa {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition:
+    border-radius 3s ease,
+    background-image 3s ease;
+}
+
+.caixa:hover {
+  border-radius: 50%;
+  background-image: url(../../img/e.jpg);
+  background-size: cover;
+}

@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+:root {
+  --animate-duration: 0.6s;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  color: #1e1e1e;
+  opacity: 0;
+}
+
+input {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid #808080;
+}
+
+input:focus {
+  border-bottom: 3px solid #1e1e1e;
+  animation-name: pulse;
+  animation-duration: var(--animate-duration);
+}
+
+#password:focus {
+  --animate-duration: 1.2s;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  color: #1e1e1e;
+  background-color: #9d9d9d;
+  border: 0;
+  cursor: pointer;
+}
