@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>Botão com pulo elástico no clique (propriedades CSS + ease-function)</h2>
+    <button id="pulo">Clica em mim</button>
+
+    <script type="module">
+      import { animate } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
+
+      const botao = document.getElementById("pulo");
+
+      botao.addEventListener("click", () => {
+        animate(botao, {
+          translateY: [
+            { to: -25, duration: 150, ease: "outQuad" },
+            { to: 0, duration: 700, ease: "outElastic(1, 0.4)" },
+          ],
+          scale: [
+            { to: 1.12, duration: 150, ease: "outQuad" },
+            { to: 1, duration: 700, ease: "outElastic(1, 0.4)" },
+          ],
+          backgroundColor: [
+            { to: "#ffd000", duration: 150 },
+            { to: "#9d9d9d", duration: 700 },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>

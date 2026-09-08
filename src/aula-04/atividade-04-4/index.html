@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>Ícone de menu que vira X no clique (Morph)</h2>
+    <svg id="menu" viewBox="0 0 100 100" width="120" height="120">
+      <path id="traco-topo" d="M15,30 L85,30" />
+      <path id="traco-meio" d="M15,50 L85,50" />
+      <path id="traco-base" d="M15,70 L85,70" />
+    </svg>
+
+    <svg class="alvos" viewBox="0 0 100 100">
+      <path id="diag-1" d="M25,25 L75,75" />
+      <path id="diag-2" d="M25,75 L75,25" />
+      <path id="reta-topo" d="M15,30 L85,30" />
+      <path id="reta-base" d="M15,70 L85,70" />
+    </svg>
+
+    <script type="module">
+      import { animate, svg } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
+
+      const menu = document.getElementById("menu");
+      let aberto = false;
+
+      menu.addEventListener("click", () => {
+        aberto = !aberto;
+        animate("#traco-topo", { d: svg.morphTo(aberto ? "#diag-1" : "#reta-topo"), duration: 400, ease: "inOutQuad" });
+        animate("#traco-base", { d: svg.morphTo(aberto ? "#diag-2" : "#reta-base"), duration: 400, ease: "inOutQuad" });
+        animate("#traco-meio", { opacity: aberto ? 0 : 1, duration: 300, ease: "linear" });
+      });
+    </script>
+  </body>
+</html>
