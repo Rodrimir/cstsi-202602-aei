@@ -35,6 +35,8 @@ export default defineConfig({
         'aula-04-atividade-04-2': caminhoAbsoluto('./src/aula-04/atividade-04-2/index.html'),
         'aula-04-atividade-04-3': caminhoAbsoluto('./src/aula-04/atividade-04-3/index.html'),
         'aula-04-atividade-04-4': caminhoAbsoluto('./src/aula-04/atividade-04-4/index.html'),
+        'aula-05-atividade-05-1': caminhoAbsoluto('./src/aula-05/atividade-05-1/index.html'),
+        'aula-05-atividade-05-2': caminhoAbsoluto('./src/aula-05/atividade-05-2/index.html'),
       },
     },
   },

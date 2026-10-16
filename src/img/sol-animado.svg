@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    #raios, #disco {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    #raios {
+      animation: girar 8s linear infinite;
+    }
+
+    #disco {
+      animation: pulsar 2s ease-in-out infinite;
+    }
+
+    @keyframes girar {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulsar {
+      50% {
+        transform: scale(1.12);
+      }
+    }
+  </style>
+
+  <g id="raios" stroke="#ffb703" stroke-width="10" stroke-linecap="round">
+    <line x1="100" y1="18" x2="100" y2="44" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(45 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(90 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(135 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(180 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(225 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(270 100 100)" />
+    <line x1="100" y1="18" x2="100" y2="44" transform="rotate(315 100 100)" />
+  </g>
+
+  <circle id="disco" cx="100" cy="100" r="48" fill="#ffd000" />
+</svg>
