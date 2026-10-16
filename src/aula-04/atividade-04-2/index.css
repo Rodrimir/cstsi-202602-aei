@@ -6,3 +6,8 @@ body {
 #lua {
   cursor: pointer;
 }
+
+#lua g {
+  fill: #1c1b1b;
+  transition: fill 0.3s ease;
+}

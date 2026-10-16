@@ -7,16 +7,24 @@
   </head>
 
   <body>
-    <h2>Sol dando voltas numa órbita (Motion Path)</h2>
+    <h2>Sol dando volta (Motion Path)</h2>
     <div class="ceu">
       <svg class="orbita" viewBox="0 0 400 300">
-        <path id="orbita" d="M40,150 C40,70 360,70 360,150 C360,230 40,230 40,150 Z" />
+        <path
+          id="orbita"
+          d="M40,150 C40,70 360,70 360,150 C360,230 40,230 40,150 Z"
+        />
       </svg>
-      <div id="sol"><img src="../../img/sol.svg" alt="sol" /></div>
+      <div id="sol">
+        <img src="../../img/sol.svg" alt="sol" />
+      </div>
     </div>
 
     <script type="module">
-      import { animate, svg } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
+      import {
+        animate,
+        svg,
+      } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
 
       const orbita = svg.createMotionPath("#orbita");
 

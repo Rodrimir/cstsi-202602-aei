@@ -17,8 +17,7 @@
       preserveAspectRatio="xMidYMid meet"
     >
       <g
-        transform="translate(0.000000,1120.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        transform="translate(0.200000,1120.000000) scale(0.100000,-0.110000)"
         stroke="none"
       >
         <path
@@ -180,15 +179,19 @@ c535 -268 1321 -537 1843 -630 316 -57 683 -80 876 -57 436 53 751 287 1111
       const lua = document.getElementById("lua");
 
       lua.addEventListener("click", () => {
-        animate("#lua path", {
-          fill: [
-            { to: 1.1, duration: 800 },
-            { to: 1, duration: 800 },
-          ],
+        animate("#lua g", {
+          fill: [{ to: "#f4c542", duration: 800 }],
           ease: "inQuad",
+        });
+
+        animate("#lua", {
+          scale: [
+            { to: "1", duration: 500 },
+            { to: "1.25", duration: 500 },
+            { to: "-1", duration: 500 },
+          ],
         });
       });
     </script>
   </body>
 </html>
- 

@@ -22,16 +22,31 @@
     </svg>
 
     <script type="module">
-      import { animate, svg } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
+      import {
+        animate,
+        svg,
+      } from "https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm";
 
       const menu = document.getElementById("menu");
       let aberto = false;
 
       menu.addEventListener("click", () => {
         aberto = !aberto;
-        animate("#traco-topo", { d: svg.morphTo(aberto ? "#diag-1" : "#reta-topo"), duration: 400, ease: "inOutQuad" });
-        animate("#traco-base", { d: svg.morphTo(aberto ? "#diag-2" : "#reta-base"), duration: 400, ease: "inOutQuad" });
-        animate("#traco-meio", { opacity: aberto ? 0 : 1, duration: 300, ease: "linear" });
+        animate("#traco-topo", {
+          d: svg.morphTo(aberto ? "#diag-1" : "#reta-topo"),
+          duration: 400,
+          ease: "inOutQuad",
+        });
+        animate("#traco-base", {
+          d: svg.morphTo(aberto ? "#diag-2" : "#reta-base"),
+          duration: 400,
+          ease: "inOutQuad",
+        });
+        animate("#traco-meio", {
+          opacity: aberto ? 0 : 1,
+          duration: 300,
+          ease: "linear",
+        });
       });
     </script>
   </body>
