@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>simpleParallax nas imagens para escalamento</h2>
+
+    <div class="espaco"></div>
+    <img class="parallax-1" alt="img01" src="../../img/wallpapers/sla1.jpg" />
+    <img class="parallax-2" alt="img02" src="../../img/wallpapers/sla3.jpg" />
+    <div class="espaco"></div>
+
+    <script type="module">
+      import simpleParallax from "simple-parallax-js/vanilla";
+
+      new simpleParallax(document.querySelector(".parallax-1"), {
+        orientation: "right",
+        scale: 1.5,
+      });
+
+      new simpleParallax(document.querySelector(".parallax-2"), {
+        orientation: "right",
+        scale: 4.5,
+        delay: 0.5,
+      });
+    </script>
+  </body>
+</html>

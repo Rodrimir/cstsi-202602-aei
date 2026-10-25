@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h2>Slider de efeito cubo com Swiper</h2>
+
+    <div class="swiper slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img alt="img01" src="../../img/wallpapers/sla1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="img02" src="../../img/wallpapers/sla2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="img03" src="../../img/wallpapers/sla3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="img04" src="../../img/wallpapers/sla4.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import Swiper from "swiper";
+      import { Autoplay, EffectCube } from "swiper/modules";
+      import "swiper/css";
+      import "swiper/css/effect-cube";
+
+      const swiper = new Swiper(".slider", {
+        modules: [Autoplay, EffectCube],
+        autoplay: {
+          delay: 2000,
+          pauseOnMouseEnter: true,
+        },
+        loop: true,
+        effect: "cube",
+        speed: 800,
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+      });
+    </script>
+  </body>
+</html>
