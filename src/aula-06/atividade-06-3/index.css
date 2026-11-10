@@ -6,4 +6,6 @@ body {
 .titulo {
   font-size: 48px;
   color: #1e1e1e;
+  display: inline-block;
+  overflow: hidden;
 }
